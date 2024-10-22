@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Web</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navigation-tabs">
+            <div class="tab-container">
+                <div class="tab-list">
+                    <div class="tab-list-top">
+                        <div class="tab-item active" style="margin-top: 10px;"><i class="fa-solid fa-house"></i></div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-calendar"></i>
+                        </div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                    </div>
+                    <div class="tab-list-bottom">
+                        <div class="tab-item" style="font-size: 30px;">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                        <div class="tab-item">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="content-container1">
+                    <div class="search-bar">
+                        <input type="text" name="" id="" placeholder="Type City Name ...">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="main-board">
+                        <div class="main-board-header">
+                            
+                            
+                        </div>
+                        <div class="main-board-content-container">
+                            <div class="main-board-content1">
+                                <div class="location">
+                                    <!-- <i class="fa-solid fa-location-dot"></i> -->
+                                    <i class="fa-solid fa-location-crosshairs"></i>
+                                    <div class="city-name">Ha Noi</div>
+                                    <div>,</div>
+                                    <div class="country-name">VietNam</div>
+                                </div>
+                                <div class="dateTimeLocal">
+                                    <div class="time">16:10:20</div>
+                                    <div class="date">
+                                        <div class="dayOfWeek">Monday</div>
+                                        <div style="margin: 0 5px;">-</div>
+                                        <div class="dayMonthYear">
+                                            24, Dec, 2024
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="weather-today">
+                                    <div class="temperature">
+                                        <div class="temperature-value temperature-temp">26.0</div>
+                                        <div>
+                                            <div style="font-size: 30px; font-weight: normal;">o</div>
+                                        </div>
+                                        <div class="temperature-unit">C</div>
+                                    </div>
+                                    <div class="status">
+                                        High <span class="temperature-max temperature-value">27.0</span>, Low <span class="temperature-min temperature-value">12.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-board-content2">
+                                <div class="temperature-mode-container">
+                                    <div class="temperature-mode">
+                                        <div class="kelvin-mode">K</div>
+                                        <div class="celsius-mode  temperature-mode-active">C</div>
+                                    </div>
+                                </div>
+                                <div class="weather-icon" style="display: flex; align-items: flex-end; padding-top: 60px;">
+                                    <img src="resources/weather-icons/night/WeatherIcon - 1-53.png" alt="" style="width: 200px; height: auto;">
+                                     <!-- <img style="border-radius: 20px; background-color: black; width: 200px; height: auto;" src="resources/icons8-windy-weather.gif" alt=""> -->
+                                </div>
+                                <div class="weather-forecast" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-end;">
+                                    <div class="weather-overview" style="font-size: 40px;">Cloudy</div> 
+                                    <div class="weather-feels-like" style="font-weight: 300;">Feels Like <span class="temperature-feels-like temperature-value">27.0</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="today-week">
+                        <div class="today-week-container1">
+                            <div class="today-week-header">3 hour forecast</div>
+                            <div class="today-weather-forecast">
+                                <div class="today-weather-forecast-item">
+                                    <div class="today-weather-forecast-item-hour" style="font-size: 20px;">12H</div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-33.png" alt="" style="width: 100%; height: auto; margin: 0px;">
+                                    <div class="today-weather-forecast-item-temparature">
+                                        <span class="temperature-value" style="font-size: 20px;">26.0</span>
+                                        <span style="font-size: 10px;">o</span>
+                                    </div>
+                                </div>
+                                <div class="today-weather-forecast-item">
+                                    <div class="today-weather-forecast-item-hour" style="font-size: 20px;">12H</div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-33.png" alt="" style="width: 100%; height: auto; margin: 0px;">
+                                    <div class="today-weather-forecast-item-temparature">
+                                        <span class="temperature-value" style="font-size: 20px;">26.0</span>
+                                        <span style="font-size: 10px;">o</span>
+                                    </div>
+                                </div>
+                                <div class="today-weather-forecast-item">
+                                    <div class="today-weather-forecast-item-hour" style="font-size: 20px;">12H</div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-33.png" alt="" style="width: 100%; height: auto; margin: 0px;">
+                                    <div class="today-weather-forecast-item-temparature">
+                                        <span class="temperature-value" style="font-size: 20px;">26.0</span>
+                                        <span style="font-size: 10px;">o</span>
+                                    </div>
+                                </div>
+                                <div class="today-weather-forecast-item">
+                                    <div class="today-weather-forecast-item-hour" style="font-size: 20px;">12H</div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-33.png" alt="" style="width: 100%; height: auto; margin: 0px;">
+                                    <div class="today-weather-forecast-item-temparature">
+                                        <span class="temperature-value" style="font-size: 20px;">26.0</span>
+                                        <span style="font-size: 10px;">o</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="today-week-container2">
+                            <div class="sun-information-container">
+                                <div class="sun-information">
+                                    <div class="sun-information-header">Sunrise</div>
+                                    <div class="sun-rise-hour sun-information-content">6:45</div>
+                                </div>
+                                <div class="sun-information">
+                                    <div class="sun-information-header">Sunset</div>
+                                    <div class="sun-set-hour sun-information-content">17:45</div>
+                                </div>
+                                <div class="sun-information">
+                                    <div class="sun-information-header">Length of day</div>
+                                    <div class="length-of-day sun-information-content">10h 23m</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-container2">
+                    <div class="today-highlight-container" style="padding: 5px 20px 0 20px;">
+                        <div id="container" style="width: 100%; height: 380px;"></div>
+                    </div>
+                    <div class="other-days">
+                        <div class="today-highlight-header">Other Days</div>
+                        <div class="today-highlight-content-container">
+                            <div class="other-days-item">
+                                <div class="dayOfWeek">Tuesday - 25, Dec</div>
+                                <div class="dayOfWeek-forecast">
+                                    <div class="dayOfWeek-forecast-temperature">
+                                        <span class="temperature-value" style="font-size: 25px;">26</span>
+                                        <span style="font-size: 15px;">o</span>
+                                        <span class="temperature-unit" style="font-size: 25px;">C</span>
+                                    </div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-30.png" alt="" style="width: 30%;">
+                                </div>
+                            </div>
+                            <div class="other-days-item">
+                                <div class="dayOfWeek">Tuesday - 25, Dec</div>
+                                <div class="dayOfWeek-forecast">
+                                    <div class="dayOfWeek-forecast-temperature">
+                                        <span class="temperature-value" style="font-size: 25px;">26</span>
+                                        <span style="font-size: 15px;">o</span>
+                                        <span class="temperature-unit" style="font-size: 25px;">C</span>
+                                    </div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-30.png" alt="" style="width: 30%;">
+                                </div>
+                            </div>
+                            <div class="other-days-item">
+                                <div class="dayOfWeek">Tuesday - 25, Dec</div>
+                                <div class="dayOfWeek-forecast">
+                                    <div class="dayOfWeek-forecast-temperature">
+                                        <span class="temperature-value" style="font-size: 25px;">26</span>
+                                        <span style="font-size: 15px;">o</span>
+                                        <span class="temperature-unit" style="font-size: 25px;">C</span>
+                                    </div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-30.png" alt="" style="width: 30%;">
+                                </div>
+                            </div>
+                            <div class="other-days-item">
+                                <div class="dayOfWeek">Tuesday - 25, Dec</div>
+                                <div class="dayOfWeek-forecast">
+                                    <div class="dayOfWeek-forecast-temperature">
+                                        <span class="temperature-value" style="font-size: 25px;">26</span>
+                                        <span style="font-size: 15px;">o</span>
+                                        <span class="temperature-unit" style="font-size: 25px;">C</span>
+                                    </div>
+                                    <img src="resources/weather-icons/day/WeatherIcon - 1-30.png" alt="" style="width: 30%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div style="margin-left: 10px;"> Notice </div>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-message">Tên thành phố không hợp lệ.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/highChart.mjs"></script>
+    <script type="module" src="js/addEvent.mjs"></script>
+    <script type="module" src="js/getApiResponse.mjs"></script>
+</body>
+
+</html>
